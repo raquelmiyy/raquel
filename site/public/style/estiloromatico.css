@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .banner3 {
+      background-image: url('../imgs/estilo-romantico/banner-romantico.png');
+      background-size: cover;
+      height: 550px;
+      
+  }

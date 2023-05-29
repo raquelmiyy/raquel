@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    width: 85%;
+    height: 90%;
+    margin: auto;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container h4{
+    margin-bottom: 5%;
+}
+
+.social .container{
+    height: 400px;
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.titulo {
+    color: black ;
+    font-weight: 500;
+    
+}
+
+.navbar {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navbar a, .navbar li {
+    color: black;
+    text-decoration: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+    
+ul li a {
+    display: block;
+    padding: 12px 12px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 120px;
+    background: #f9f9f9;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #f1f1f1;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+.banner {
+    background-image: url('../public/imgs/home/banner.png');
+    background-size: cover;
+    opacity: 0.8;
+    
+}
+
+.banner .container {
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    width: 100;
+    font-size:1.7rem;
+}
+
+.banner {
+    font-weight: 800px;
+    color: white;
+}
+
+.boxes {
+    display: flex;
+    padding: 20px 0 50px 0; 
+}
+    
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px;
+}
+    
+.box img {
+    width: 83px;
+    padding: 5px;
+    
+}
+    
+.box h4 {
+    color: black;
+    font-weight: bold;
+}
+
+
+.boxes-gif {
+    display: flex;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 13%;
+    margin-bottom: 7%;
+    
+}
+    
+.box-gif {
+    padding: 5px;
+    background-color: black;
+    width: 370px;
+    height: 370px;
+}
+
+
+
+.box-gif img {
+    width: 360px;
+    height: 360px;
+}
+
+.box-i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.boxes-insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-bottom: 7%;
+}
+    
+
+
+.box-i img {
+    width: 350px;
+    height: 300px;
+    
+}
+
+.social2 {
+    text-align: center;
+}
+
+.social2 .boxes {
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.social2 .box img{
+    width: 300px;
+    height: 300px;
+}
+
+.social2 .box img:hover{
+    opacity: 0.8;
+}
+
+.social2 p {
+font-weight: bold;
+}
+
+.out .banner2 img {
+    width: 80%;
+    height: 500px;
+}
+
+.out {
+    padding-bottom: 15px;
+    margin-bottom: 7%;
+}
+
+/* .box-quiz .box{ 
+  width: 800px;
+  height: 400px;
+  background-color: black;
+  border-radius: 40px;
+}
+
+.box-quiz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.box-quiz img{
+    width: 250px;
+    height: 400px;
+} */
+
+
+    .sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    text-align: center; /* Adicionado para centralizar o texto */
+    background-color: black;
+    width: 80%;
+    height: 400px;
+    border-radius: 30px;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    display: inline-block; /* Adicionado para alinhar verticalmente */
+    vertical-align: middle; /* Adicionado para alinhar verticalmente */
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .bio {
+    display: inline-block; /* Adicionado para alinhar verticalmente */
+    vertical-align: middle; /* Adicionado para alinhar verticalmente */
+    text-align: left; /* Adicionado para alinhar o texto à esquerda */
+  }
+  
+  .bio h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .bio p {
+    color: white;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+.footer {
+    background-color: black;
+    text-align: center;
+    padding: 25px;
+    margin-top: 5%;
+}
+
+.footer img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+

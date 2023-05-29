@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner2 {
+    background-image: url('../imgs/estilo-casual/casualfashion.png');
+    background-size: cover;
+    height: 550px;
+    
+}
+
+
+.social2 .container2 .desc-estilo {
+  width: 80%;
+}
+
+.social2 .boxes h1 {
+    color: black;
+    font-weight: bold;
+}
+
+.social2 p{
+  font-weight: lighter;
+}
+
+.social2 .box {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  padding-top: 1px;
+  margin: 11px;
+}
+
+.container2 h1{
+  margin-top: 3%;
+}
+
+.desc-estilo p {
+  display: flex;
+  justify-content: center;
+  padding-left: 25%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.box p {
+  margin-top: 1%;
+}
+
+.boxes {
+  margin-bottom: 4%;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 3%;
+  }
+  
+div.gallery:hover {
+    border: 1px solid black;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+  
+div.desc {
+    padding: 20px;
+    text-align: center;
+}
+  
+ 
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+.social2 .container2 {
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2%;
+}

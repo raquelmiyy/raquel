@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .banner3 {
+      background-image: url('../imgs/estilo-classico/banner-classico.png');
+      background-size: cover;
+      height: 550px;
+      
+  }
+
+.box {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+    
+.box img {
+    width: 130px;
+    padding: 5px;
+    
+}
+    

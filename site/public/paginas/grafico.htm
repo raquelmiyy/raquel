@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+     <link rel="stylesheet" href="../style/quiz.css">
+    <link rel="stylesheet" href="../style/grafico.css">
+    <title>Vitrine Fashion - Gráfico</title>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+   <a href="./index.html"><h1 class="titulo">Vitrine Fashion</h1></a> 
+    <ul class="navbar">
+        <li> <a href="./index.html">Home</a></li>
+        <li><a href="./paginas/login.html"><img src="../imgs/home/usuario.png" alt=""></a></li>
+    </ul>
+    </div>
+</div>
+</div>
+   <div class="grafico">
+     <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+   </div>
+   <div class="grafico">
+     <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+   </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [ 'Casual', 'Criativo', 'Sexy', 'Dramatico Urbano', 'Elegante', 'Clássico', 'Romântico'],
+      datasets: [{
+        label: 'Estilos',
+        backgroundColor: `#DC143C`,
+        borderColor: `#00000`,
+        data: [15, 7, 5,3,4,9,8],
+        borderWidth: 1
+      }
+    ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<script>
+  const ctx2 = document.getElementById('myChart2');
+  
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Sul', 'Sudeste', 'Centro-Oeste', 'Nordeste', 'Norte'],
+        datasets: [{
+          label: 'Regiões',
+          backgroundColor: `#DC143C`,
+          borderColor: `800000`,
+          data: [11, 10, 10, 15, 5],
+          borderWidth: 1
+        }
+      ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+</html>

@@ -1,0 +1,38 @@
+
+.social2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.social2 .boxes{
+    box-shadow:  2px 2px 4px black ;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+
+.social2 .box{
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(0);
+}
+
+.social2 img {
+    object-fit: cover ;
+    height: 500px;
+    width: 500px;
+}
+
+
+<img src="../imgs/home/color1.jpg" alt="">
+                 <img src="../imgs/home/color2.jpg" alt="">
+                 <img src="../imgs/home/color3.jpg" alt="">
+                 <img src="../imgs/home/color4.jpg" alt="">
+                 <img src="../imgs/home/color5.jpg" alt="">
+                 <img src="../imgs/home/color6.jpg" alt="">
+                 <img src="../imgs/home/color7.jpg" alt="">
+                 <img src="../imgs/home/color8.jpg" alt="">
+                 <img src="../imgs/home/color9.jpg" alt="">

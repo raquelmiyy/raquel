@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/cadastro.css">
+    <title>Vitrine Fashion - Cadastro</title>
+</head>
+
+<body>
+    <div class="container-cadastro">
+        <div class="img-box">
+        <img src="../imgs/login e cadastro/back_cad.jpg">
+        </div>
+        <div class="content-box">
+        <div class="form-box">
+        <h2>Cadastre - se</h2>
+        <form>
+        <div class="input-box">
+        <span>Nome</span>
+        <input type="text" placeholder="Digite o nome" id="iptNome">
+        <span>Sobrenome</span>
+        <input type="text" placeholder="Digite o sobrenome" id="iptSobrenome">
+        <span>Email</span>
+        <input type="email" placeholder="Digite o email" id="iptEmail">
+        </div>
+
+        <label>
+          Data de Nascimento: <input type="date" id="iptDt">
+         </label>
+         <br><br>
+
+        <div class="input-box">
+        <span>Senha</span>
+        <input type="password" placeholder="Digite a senha" id="iptSenha">
+        </div>
+   
+       <div class="input-box">
+        <span>Telefone</span>
+        <input type="tel" placeholder="Ex: (11)912341234" id="iptTelefone">
+       </div>
+
+       <div class="input-box">
+       <label for="regiao">Região:</label>
+       <select name="regioes" id="iptRegiao">
+       <option value="1">Sul</option>
+       <option value="2">Sudeste</option>
+       <option value="3">Centro-Oeste</option>
+       <option value="4">Nordeste</option>
+       <option value="5">Norte</option>
+       </select>
+       </div>
+
+  
+        </form>
+                 <button class="botao" onclick="cadastrar()">Cadastrar</button>
+      
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = iptNome.value;
+    var emailVar = iptEmail.value;
+    var senhaVar = iptSenha.value;
+    var sobrenomeVar = iptSobrenome.value;
+    var regiaoVar = iptRegiao.value;
+    var telefoneVar = iptTelefone.value;
+    var dtNascVar = iptDt.value;
+
+
+    //DATAAAAAAAAAAAAAAAAAAAAA DE NASCIMENTO
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || telefoneVar == "" || regiaoVar == "" || dtNascVar == "") {
+        //  cardErro.style.display = "block"
+        //  mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        // finalizarAguardar();
+        return false;
+    }
+    // else {
+    //     setInterval(sumirMensagem, 5000)
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nomeServer: nomeVar,
+            sobrenomeServer: sobrenomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+            telefoneServer: telefoneVar,
+            regiaoServer: regiaoVar,
+            dtNascServer: dtNascVar 
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // cardErro.style.display = "block";
+            // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            // setTimeout(() => {
+                window.location = "login.html";
+            // }, "2000")
+
+            // limparFormulario();
+            // finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
+
+    return false;
+}
+
+// function sumirMensagem() {
+//     cardErro.style.display = "none"
+// }
+
+</script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/login.css">
+    <title>Vitrine Fashion - Login</title>
+</head>
+
+<body>
+    <div class="container-login">
+        <div class="img-box">
+            <img src="../imgs/login e cadastro/back.jpg">
+        </div>
+        <div class="content-box">
+            <!-- <div class="header">
+                <div class="container">
+                <ul class="navbar">
+                    <li> <a href="home.htm">Home</a></li>
+                </ul>
+                </div>
+            </div> -->
+            <div class="form-box">
+                <h2>Login</h2>
+                <form>
+                    <div class="input-box">
+                        <span>Email</span>
+                        <input type="email" placeholder="Digite o email" id="iptEmail">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Senha</span>
+                        <input type="password" placeholder="Digite a senha" id="iptSenha">
+                    </div>
+
+                    <div class="lembrar">
+                        <label>
+                            <input type="checkbox"> Lembrar - me
+                        </label>
+                        <a href="#">Esqueceu a Senha?</a>
+                    </div>
+
+                    
+
+                    <div class="input-box">
+                       <p>Não Tem Uma Conta? <a href="cadastro.htm">Inscrever-se</a></p>
+                    </div>
+                </form>
+
+                <button class="botao" onclick="entrar()">Entrar</button>
+                
+
+                <!-- <h3>Logar Com</h3>
+                <ul class="ul">
+                    <li><img src="../imgs/login e cadastro/facebook.png"></li>
+                    <li><img src="../imgs/login e cadastro/google.png"></li>
+                    <li><img src="../imgs/login e cadastro/apple.png"></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+function entrar() {
+    // aguardar();
+
+    var emailVar = iptEmail.value;
+    var senhaVar = iptSenha.value;
+
+    if (emailVar == "" || senhaVar == "") {
+        // cardErro.style.display = "block"
+        // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        //  finalizarAguardar();
+        return false;
+    }
+    // else {
+    //     setInterval(sumirMensagem, 5000)
+    // }
+
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+
+                setTimeout(function () {
+                    window.location = "quiz.html";
+                }, 1000); // apenas para exibir o loading
+
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+}
+
+// function sumirMensagem() {
+//     cardErro.style.display = "none"
+// }
+</script>

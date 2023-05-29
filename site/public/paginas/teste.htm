@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dragon Ball Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #DB0000;
+    }
+    
+    .question {
+      margin: 20px auto;
+      width: 500px;
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .option {
+      margin: 10px;
+    }
+    
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dragon Ball Quiz</h1>
+  
+  <div class="question">
+    <p>Qual é o nome do protagonista de Dragon Ball?</p>
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="question1" value="goku">
+        <label for="goku">Goku</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="question1" value="vegeta">
+        <label for="vegeta">Vegeta</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="question1" value="gohan">
+        <label for="gohan">Gohan</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="question">
+    <p>Qual é o nome do planeta natal dos Saiyajins?</p>
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="question2" value="earth">
+        <label for="earth">Terra</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="question2" value="namek">
+        <label for="namek">Namekusei</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="question2" value="vegeta">
+        <label for="vegeta">Vegeta</label>
+      </div>
+    </div>
+  </div>
+  
+  <button onclick="checkAnswers()">Verificar Respostas</button>
+  
+  <div id="result"></div>
+  
+  <script>
+    function checkAnswers() {
+      var question1 = document.querySelector('input[name="question1"]:checked').value;
+      var question2 = document.querySelector('input[name="question2"]:checked').value;
+      
+      var correctAnswers = 0;
+      
+      if (question1 === 'goku') {
+        correctAnswers++;
+      }
+      
+      if (question2 === 'vegeta') {
+        correctAnswers++;
+      }
+      
+      var resultElement = document.getElementById('result');
+      
+      resultElement.textContent = "Você acertou " + correctAnswers + " de 2 perguntas!";
+    }
+  </script>
+</body>
+</html>
