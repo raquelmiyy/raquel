@@ -121,8 +121,36 @@
       return 'Estilo Criativo'
     }
 
-
-
   return estilo;
-  }
+  
+    fetch("/usuarios/cadastrarEstilo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuario:  sessionStorage.ID_USUARIO,
+            estilo: estiloPessoal
+          })
+        })
+        .then(function (resposta) {
+      
+          if (resposta.ok) {
+            console.log("resposta: ", resposta);
+      
+          } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
+        }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+      
+        });
+      
+        return false;
+  
+}
+
+
 </script>
