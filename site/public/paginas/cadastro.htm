@@ -57,6 +57,19 @@
        </select>
        </div>
 
+       <div class="input-box">
+        <label for="estilo">Estilo:</label>
+        <select name="estilo" id="iptEstilo">
+        <option value="1">Clássico</option>
+        <option value="2">Casual</option>
+        <option value="3">Criativo</option>
+        <option value="4">Dramático Urbano</option>
+        <option value="5">Elegante</option>
+        <option value="6">Romântico</option>
+        <option value="7">Sexy</option>
+        </select>
+        </div>
+
   
         </form>
                  <button class="botao" onclick="cadastrar()">Cadastrar</button>
@@ -80,10 +93,11 @@ function cadastrar() {
     var regiaoVar = iptRegiao.value;
     var telefoneVar = iptTelefone.value;
     var dtNascVar = iptDt.value;
+    var estiloVar = iptEstilo.value;
 
 
-    //DATAAAAAAAAAAAAAAAAAAAAA DE NASCIMENTO
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || telefoneVar == "" || regiaoVar == "" || dtNascVar == "") {
+    
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || telefoneVar == "" || regiaoVar == "" || dtNascVar == "" || estiloVar == "") {
         //  cardErro.style.display = "block"
         //  mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -109,6 +123,7 @@ function cadastrar() {
             senhaServer: senhaVar,
             telefoneServer: telefoneVar,
             regiaoServer: regiaoVar,
+            estiloServer: estiloVar,
             dtNascServer: dtNascVar 
         })
     }).then(function (resposta) {
@@ -116,15 +131,7 @@ function cadastrar() {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            // cardErro.style.display = "block";
-            // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-            // setTimeout(() => {
                 window.location = "login.html";
-            // }, "2000")
-
-            // limparFormulario();
-            // finalizarAguardar();
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
@@ -135,9 +142,5 @@ function cadastrar() {
 
     return false;
 }
-
-// function sumirMensagem() {
-//     cardErro.style.display = "none"
-// }
 
 </script>
