@@ -112,6 +112,29 @@ div.desc {
   justify-content: center;
 }
 
+#destaque {
+  color: red;
+  font-size: 30px;
+}
+
+#metricaEstilo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#EstiloBarra {
+  position: relative;
+  width: 850px;
+  height: 700px;
+  margin-bottom: 20px;
+}
+
+.grafico {
+  display: block;
+}
+
 
 .footer img {
   width: 40px;

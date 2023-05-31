@@ -1,9 +1,23 @@
-.grafico {
-    display: flex;
-    justify-content: space-around;
-}
 
 .header img {
     width: 30px;
     height: 30px;
+}
+
+#metricaEstilo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#EstiloBarra {
+    position: relative;
+    width: 850px;
+    height: 700px;
+    margin-bottom: 20px;
+}
+
+.grafico {
+    display: block;
 }
