@@ -58,7 +58,7 @@
        </div>
 
        <div class="input-box">
-        <label for="estilo">Estilo:</label>
+        <label for="estilo">Qual seu Estilo:</label>
         <select name="estilo" id="iptEstilo">
         <option value="1">Clássico</option>
         <option value="2">Casual</option>
@@ -98,15 +98,11 @@ function cadastrar() {
 
     
     if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || telefoneVar == "" || regiaoVar == "" || dtNascVar == "" || estiloVar == "") {
-        //  cardErro.style.display = "block"
-        //  mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+        
         // finalizarAguardar();
         return false;
     }
-    // else {
-    //     setInterval(sumirMensagem, 5000)
-    // }
+   
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
