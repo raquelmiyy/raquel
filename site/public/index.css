@@ -34,7 +34,7 @@
 .titulo {
     color: black ;
     font-weight: 500;
-    
+    text-decoration: none;
 }
 
 .navbar {

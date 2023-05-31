@@ -4,6 +4,39 @@
     box-sizing: border-box;
 }
 
+.header {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    width: 85%;
+    height: 90%;
+    margin: auto;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container h4{
+    margin-bottom: 5%;
+}
+
+.social .container{
+    height: 400px;
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.titulo {
+    color: black ;
+    font-weight: 500;
+    text-decoration: none;
+}
+
 
 .banner {
     background-image: url('../imgs/not-quiz/banner.jpg');
@@ -17,6 +50,10 @@ h1{
    text-align: center;
 }
 
+.header img {
+    width: 30px;
+    height: 30px;
+}
 
 img{
     width: 350px;

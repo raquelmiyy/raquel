@@ -70,6 +70,7 @@ function cadastrar(req, res) {
     var telefone = req.body.telefoneServer;
     var regiao = req.body.regiaoServer;
     var dtNasc = req.body.dtNascServer;
+    var estilo = req.body.estiloServer;
 
 
     // Faça as validações dos valores
@@ -87,11 +88,12 @@ function cadastrar(req, res) {
          res.status(400).send("Sua data de nascimento está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
+    }else if (estilo == undefined) {
+        res.status(400).send("Seu estilo está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        // TALVEZ DATA DE NASCIMENTOOOOOOOOOO
-        usuarioModel.cadastrar(nome, sobrenome, email, dtNasc, senha, telefone, regiao)
+        usuarioModel.cadastrar(nome, sobrenome, email, dtNasc, senha, telefone, regiao,estilo)
             .then(
                 function (resultado) {
                     res.json(resultado);

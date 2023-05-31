@@ -8,6 +8,11 @@
     background-color: white;
 }
 
+.header img {
+    width: 30px; height: 30px;
+      
+} 
+
 .container-h {
     display: flex;
     height: 90%;
