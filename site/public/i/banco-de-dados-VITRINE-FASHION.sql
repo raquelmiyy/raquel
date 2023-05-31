@@ -23,7 +23,9 @@ dtNasc date,
 senha char(16),
 telefone char(11),
 fkRegiao int,
-constraint fkRegiao foreign key (fkRegiao) references regiao(idRegiao)
+constraint fkRegiao foreign key (fkRegiao) references regiao(idRegiao),
+fkEstilo int,
+constraint fkEstilo foreign key (fkEstilo) references usuario(idUsuario)
 );
 
 desc usuario;
@@ -32,9 +34,18 @@ select * from usuario join regiao on fkRegiao = idRegiao;
 select usuario.nome, usuario.sobrenome, usuario.email, usuario.senha, usuario.telefone, regiao.regiao from usuario join regiao on fkRegiao = idRegiao;
 
 
-create table quizResultado (
+create table estilo (
 id int primary key auto_increment,
-resultado varchar(45),
-fkUsuario int,
-constraint fkUsuario foreign key (fkUsuario) references usuario(idUsuario)
+estilo varchar(45)
 );
+
+insert into estilo values
+(null,'Casual'),
+(null,'Clássico'),
+(null,'Criativo'),
+(null,'Elegante'),
+(null,'Dramático Urbano'),
+(null,'Romântico'),
+(null,'Sexy');
+
+
