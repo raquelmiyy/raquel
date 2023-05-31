@@ -232,51 +232,27 @@ font-weight: bold;
     height: 400px;
 } */
 
-
-    .sobre-mim {
+#destaque {
+    color: red;
+    font-size: 30px;
+  }
+  
+  #metricaRegiao {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Adicionado para centralizar horizontalmente */
-    text-align: center; /* Adicionado para centralizar o texto */
-    background-color: black;
-    width: 80%;
-    height: 400px;
-    border-radius: 30px;
-    margin-left: 10%;
-    margin-top: 5%;
+    flex-direction: column;
   }
   
-  .profile-pic {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 20px;
-    display: inline-block; /* Adicionado para alinhar verticalmente */
-    vertical-align: middle; /* Adicionado para alinhar verticalmente */
+  #regiaoBarra {
+    position: relative;
+    width: 850px;
+    height: 700px;
+    margin-bottom: 20px;
   }
   
-  .profile-pic img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .bio {
-    display: inline-block; /* Adicionado para alinhar verticalmente */
-    vertical-align: middle; /* Adicionado para alinhar verticalmente */
-    text-align: left; /* Adicionado para alinhar o texto à esquerda */
-  }
-  
-  .bio h2 {
-    color: white;
-    font-size: 35px;
-    margin-bottom: 10px;
-  }
-  
-  .bio p {
-    color: white;
-    font-size: 25px;
-    line-height: 1.5;
+  .grafico {
+    display: block;
   }
 
 .footer {
