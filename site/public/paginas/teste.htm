@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enquete de Estilo</title>
+  <style>
+    .poll-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .poll-card {
+      background-color: red;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+    }
+    .poll-question {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .poll-option {
+      margin-bottom: 5px;
+    }
+    .poll-button {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="poll-container">
+    <div class="poll-card">
+      <h2 class="poll-question">Qual é a sua cor favorita para roupas?</h2>
+      <div class="poll-options">
+        <div class="poll-option">
+          <input type="radio" name="poll-option" value="preto">
+          <label>Preto</label>
+        </div>
+        <div class="poll-option">
+          <input type="radio" name="poll-option" value="branco">
+          <label>Branco</label>
+        </div>
+        <div class="poll-option">
+          <input type="radio" name="poll-option" value="azul">
+          <label>Azul</label>
+        </div>
+        <div class="poll-option">
+          <input type="radio" name="poll-option" value="vermelho">
+          <label>Vermelho</label>
+        </div>
+      </div>
+      <button class="poll-button" onclick="submitVote()">Enviar</button>
+      <div id="poll-result"></div>
+    </div>
+  </div>
+
+  <script>
+    function submitVote() {
+      var options = document.getElementsByName("poll-option");
+      var selectedOption = null;
+
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+          selectedOption = options[i].value;
+          break;
+        }
+      }
+
+      if (selectedOption) {
+        // Aqui você pode enviar o resultado para o servidor ou realizar outras ações com os dados
+        displayResult(selectedOption);
+      } else {
+        alert("Por favor, selecione uma opção.");
+      }
+    }
+
+    function displayResult(option) {
+      var resultContainer = document.getElementById("poll-result");
+      resultContainer.innerHTML = "Você votou em: " + option;
+    }
+  </script>
+</body>
+</html>

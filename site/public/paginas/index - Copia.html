@@ -67,6 +67,17 @@
         </div>
     </div>
     
+    <!-- <div class="carroselContainer">
+        <div class="homeCarrossel">
+            <div class="imgEsgrima" id="img">
+                <img src="../imgs/estilo-classico/classico/cla2.jpg" class="imgSlide">
+                <img src="../imgs/estilo-classico/classico/cla1.jpg" class="imgSlide">
+                <img src="../imgs/estilo-classico/classico/cla3.jpg" class="imgSlide">
+                <img src="../imgs/estilo-classico/classico/cla4.jpg" class="imgSlide">
+            </div>
+        </div>
+    </div> -->
+
 
     <div class="social2">
         <h1>Combinações</h1>
@@ -310,4 +321,22 @@
         }
 
     }
+</script>
+<script>
+    var imgs = document.getElementById('img');
+    var img = document.querySelectorAll("#img img")
+    
+    var slideContador = 0;
+    
+    function slide() {
+    slideContador++;
+    if (slideContador > img.length - 1) {
+    slideContador = 0
+    }
+    
+    imgs.style.transform = `translateX(${-slideContador * 500}px)`;
+    }
+    
+    setInterval(slide, 1900);
+    
 </script>

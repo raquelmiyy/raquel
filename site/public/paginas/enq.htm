@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+  background-color: #f43838;
+  border: 2px solid #ff99cc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+form {
+  color: #fff;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-left: 5px;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Enquete de Moda</h2>
+        <p>Qual é a sua tendência de moda favorita para esta temporada?</p>
+        <form>
+          <input type="radio" id="opcao1" name="opcao" value="opcao1">
+          <label for="opcao1">Estampas florais</label><br>
+          <input type="radio" id="opcao2" name="opcao" value="opcao2">
+          <label for="opcao2">Tons pastel</label><br>
+          <input type="radio" id="opcao3" name="opcao" value="opcao3">
+          <label for="opcao3">Roupas oversized</label><br>
+          <input type="radio" id="opcao4" name="opcao" value="opcao4">
+          <label for="opcao4">Estilo minimalista</label><br>
+          <button type="button" onclick="votar()">Votar</button>
+        </form>
+      </div>
+      
+      
+</body>
+</html>
+<script>
+    function votar() {
+  var opcoes = document.getElementsByName("opcao");
+  var opcaoSelecionada = "";
+  
+  for (var i = 0; i < opcoes.length; i++) {
+    if (opcoes[i].checked) {
+      opcaoSelecionada = opcoes[i].value;
+      break;
+    }
+  }
+  
+  if (opcaoSelecionada !== "") {
+    alert("Você votou em: " + opcaoSelecionada);
+    // Aqui você pode adicionar código para enviar a resposta para o servidor, atualizar o contador de votos, etc.
+  } else {
+    alert("Por favor, selecione uma opção antes de votar.");
+  }
+}
+
+</script>
