@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../style/estilocasual.css">
     <link rel="stylesheet" href="../style/noticias.css">
     
 </head>
@@ -28,14 +29,30 @@
               <li><a href="../paginas/estiloelegante.htm">Elegante</a></li>
               <li><a href="../paginas/estilosexy.htm">Sexy</a></li>
           </ul></li>
-          <li><a href="../paginas/grafico.htm">Gráficos</a></li>
-          <li><a href="../paginas/login.html"><img src="../imgs/home/usuario.png" alt=""></a></li>
+          <button onclick="limparSessao()">Sair</button> 
       </ul>
       </div>
   </div>
 
    <h1 style="color: white; background-color: black;">Notícias sobre o universo da moda</h1>
        <div class="container-noticia">
+         <div class="enquete">
+            <h2>Enquete de Notícia</h2>
+            <p>Que tipo de notícia/artigo você gostaria de ver aqui?</p>
+            <form>
+              <input type="radio" id="opcao1" name="opcao" value="opcao1">
+              <label for="opcao1">Cobertura de eventos e desfiles de moda</label><br>
+              <input type="radio" id="opcao2" name="opcao" value="opcao2">
+              <label for="opcao2">Tendência de moda atuais</label><br>
+              <input type="radio" id="opcao3" name="opcao" value="opcao3">
+              <label for="opcao3">Entrevistas com designers e influenciadores de moda</label><br>
+              <input type="radio" id="opcao4" name="opcao" value="opcao4">
+              <label for="opcao4">Dicas de moda inspiradas nas celebridades</label><br>
+                         <button type="button" onclick="votar()">Votar</button>
+
+            </form> 
+      
+          </div>
           <div class="card">
             <img src="../imgs/not-quiz/not1.jpg" alt="">
             <div class="descricao">
@@ -53,7 +70,7 @@
                <a href="https://veja.abril.com.br/comportamento/luxo-minimalista-a-tendencia-que-mescla-discricao-com-aura-de-riqueza/">Ler mais</a>
             </div>
          </div>
-         <div class="card">
+         <!-- <div class="card">
             <img src="../imgs/not-quiz/not3.jpg" alt="">
             <div class="descricao">
                <h3>Morre Mary Quant</h3>
@@ -61,7 +78,7 @@
                 Britânica de 93 anos, ela era sinônimo fashion da Swinging London, a Londres fervilhante dos Beatles e dos Stones e da moda prêt-à...  </p>
                <a href="https://veja.abril.com.br/comportamento/mary-quant-que-popularizou-a-minissaia-nos-anos-1960-morre-em-londres/">Ler mais</a>
             </div>
-         </div>
+         </div> -->
          <div class="card">
             <img src="../imgs/not-quiz/not4.jpg" alt="">
             <div class="descricao">
@@ -111,15 +128,29 @@
        </div>
        
            </div>  
-      
-    
-
-          
-         
-         
          
 <div class="footer" style="color: white;">
 Created by Raquel
 </div>
 </body>
 </html>
+<script>
+function votar() {
+  var opcoes = document.getElementsByName("opcao");
+  var opcaoSelecionada = "";
+
+
+  for (var i = 0; i < opcoes.length; i++) {
+    if (opcoes[i].checked) {
+      opcaoSelecionada = opcoes[i].value;
+      break;
+    }
+  }
+
+  if (opcaoSelecionada) {
+     alert("Você votou em: " + opcaoSelecionada);
+  } else {
+    alert("Por favor, selecione uma opção antes de votar.");
+  }
+}
+</script>

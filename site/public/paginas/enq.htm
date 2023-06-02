@@ -6,64 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .card {
-  background-color: #f43838;
-  border: 2px solid #ff99cc;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-}
-
-h2 {
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-form {
-  color: #fff;
-  font-size: 14px;
-}
-
-input[type="radio"] {
-  margin-bottom: 10px;
-}
-
-label {
-  margin-left: 5px;
-}
-
-button {
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  color: #ff4d4d;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 5px 10px;
-}
-
     </style>
 </head>
 <body>
     <div class="card">
-        <h2>Enquete de Moda</h2>
-        <p>Qual é a sua tendência de moda favorita para esta temporada?</p>
+        <h2>Enquete de Notícia</h2>
+        <p>Que tipo de notícia/artigo você gostaria de ver aqui?</p>
         <form>
           <input type="radio" id="opcao1" name="opcao" value="opcao1">
-          <label for="opcao1">Estampas florais</label><br>
+          <label for="opcao1">Cobertura de eventos e desfiles de moda</label><br>
           <input type="radio" id="opcao2" name="opcao" value="opcao2">
-          <label for="opcao2">Tons pastel</label><br>
+          <label for="opcao2">Tendência de moda atuais</label><br>
           <input type="radio" id="opcao3" name="opcao" value="opcao3">
-          <label for="opcao3">Roupas oversized</label><br>
+          <label for="opcao3">Entrevistas com designers e influenciadores de moda</label><br>
           <input type="radio" id="opcao4" name="opcao" value="opcao4">
-          <label for="opcao4">Estilo minimalista</label><br>
+          <label for="opcao4">Dicas de moda inspiradas nas celebridades</label><br>
           <button type="button" onclick="votar()">Votar</button>
         </form>
       </div>
@@ -90,5 +47,4 @@ button {
     alert("Por favor, selecione uma opção antes de votar.");
   }
 }
-
 </script>

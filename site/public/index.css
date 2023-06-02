@@ -230,26 +230,35 @@ font-weight: bold;
     margin-bottom: 7%;
 }
 
-#destaque {
-    color: red;
-    font-size: 30px;
-  }
+.card-grafico {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+.card-grafico .graph {
+    float: right;
+    width: 200px;
+}
+
   
-  #metricaRegiao {
+.card-grafico #metricaRegiao {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   
-  #regiaoBarra {
+.card-grafico  #regiaoBarra {
     position: relative;
-    width: 850px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     margin-bottom: 20px;
   }
   
-  .grafico {
+.card-grafico .grafico {
     display: block;
   }
 
@@ -268,7 +277,7 @@ font-weight: bold;
 }
 
 
-.carroselContainer {
+/* .carroselContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -290,7 +299,7 @@ font-weight: bold;
     object-fit: cover;
     width: 500px;
     border-radius: 7px;
-    }
+    } */
     
 
 

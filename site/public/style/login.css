@@ -110,6 +110,7 @@
     padding: 15px 62px;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .botao:hover {

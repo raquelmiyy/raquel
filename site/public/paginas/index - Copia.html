@@ -34,7 +34,6 @@
             </ul></li>
             <li><a href="../paginas/noticias.htm">Notícias</a></li>
             <button onclick="limparSessao()">Sair</button>
-            <!-- <li><a href="#"><img src="../imgs/home/usuario.png" alt="" ></a></li> -->
         </ul>
         </div>
     </div>
@@ -109,10 +108,10 @@
           <h1>Conheça algumas Criadoras de Conteúdo Fashion</h1>
         <div class="boxes-insta"> 
             <div class="box-i">
-               <a href="https://www.instagram.com/red_ronny/"><img src="../imgs/home/insta1" alt="" ></a>   
+               <a href="https://www.instagram.com/red_ronny/"></a>   
             </div>
             <div class="box-i" id="img">
-              <a href="https://www.instagram.com/veriyamazoe_/"><img src="../imgs/home/insta2" alt="" ></a>      
+              <a href="https://www.instagram.com/veriyamazoe_/"></a>      
             </div>
             <div class="box-i" id="img">
                 <a href="https://www.instagram.com/veriyamazoe_/"><img src="../imgs/home/insta3.png" alt="" ></a>      
@@ -123,8 +122,8 @@
         </div>
           
 
-            <!-- <div class="espaco" style="color: white;">.</div>
-            <div class="espaco" style="color: white;">.</div> -->
+            <div class="espaco" style="color: white;">.</div>
+            <div class="espaco" style="color: white;">.</div> 
 
           <h1>Workshops</h1>
          <div class="boxes"> 
@@ -147,19 +146,26 @@
     </div> 
 </div> 
 
-<div id="metricaRegiao">
-
-    <p id="paragraphGraficos">
-        <span id="destaque">regiao:</span> <br> <br>
-    </p>
-
-    <div class="grafico">
-
-        <canvas id="regiaoBarra"> </canvas>
-
-    </div>
+<div>
 
 </div>
+<div class="card-grafico">
+        <h2>A importância das temperaturas regionais no look</h2>
+        <p>
+            Cada região possui variações de temperatura que podem afetar diretamente o nosso conforto e bem-estar. Ao montar um look, é fundamental considerar essas diferenças e adaptar-se ao clima local.
+        </p>
+        <div id="metricaRegiao">
+            <div class="grafico">
+        
+                <canvas id="regiaoBarra"> </canvas>
+        
+            </div>
+        
+        </div>
+        <p>
+            Ao analisar o gráfico, é possível perceber a variação de usuários em diferentes regiões. Essa informação é essencial para planejar o conteúdo adequado e estar preparada para que nossas dicas ajudem mulheres de todas as regiões.
+        </p>
+    </div>
 
 <div class="footer" style="color: white;">
    
@@ -172,7 +178,7 @@
 </body>
 </html>
 <script>
-    function limparSessao() {
+function limparSessao() {
     // aguardar();
     sessionStorage.clear();
     // finalizarAguardar();
