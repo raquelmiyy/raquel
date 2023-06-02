@@ -65,17 +65,6 @@
             </div>
         </div>
     </div>
-    
-    <!-- <div class="carroselContainer">
-        <div class="homeCarrossel">
-            <div class="imgEsgrima" id="img">
-                <img src="../imgs/estilo-classico/classico/cla2.jpg" class="imgSlide">
-                <img src="../imgs/estilo-classico/classico/cla1.jpg" class="imgSlide">
-                <img src="../imgs/estilo-classico/classico/cla3.jpg" class="imgSlide">
-                <img src="../imgs/estilo-classico/classico/cla4.jpg" class="imgSlide">
-            </div>
-        </div>
-    </div> -->
 
 
     <div class="social2">
@@ -104,14 +93,27 @@
             </div>
          </div>
         
-          
-          <h1>Conheça algumas Criadoras de Conteúdo Fashion</h1>
+            <h1>Conheça algumas Criadoras de Conteúdo Fashion</h1>
+            <div class="carroselContainer">
+        <div class="homeCarrossel">
+            <div class="imgEsgrima" id="img">
+                <img src="../imgs/home/insta3.png" class="imgSlide">
+                <img src="../imgs/home/insta4.png" class="imgSlide">
+                <img src="../imgs/home/insta3.png" class="imgSlide">
+                <img src="../imgs/home/insta4.png" class="imgSlide">
+                <img src="../imgs/home/insta4.png" class="imgSlide">
+                <img src="../imgs/home/insta4.png" class="imgSlide">
+                <img src="../imgs/home/insta4.png" class="imgSlide">
+            </div>
+        </div>
+    </div> 
+          <!-- <h1>Conheça algumas Criadoras de Conteúdo Fashion</h1>
         <div class="boxes-insta"> 
             <div class="box-i">
-               <a href="https://www.instagram.com/red_ronny/"></a>   
+               <a href="https://www.instagram.com/red_ronny/"><img src="../imgs/home/insta3.png" alt="" ></a>   
             </div>
             <div class="box-i" id="img">
-              <a href="https://www.instagram.com/veriyamazoe_/"></a>      
+              <a href="https://www.instagram.com/veriyamazoe_/"><img src="../imgs/home/insta3.png" alt="" ></a>      
             </div>
             <div class="box-i" id="img">
                 <a href="https://www.instagram.com/veriyamazoe_/"><img src="../imgs/home/insta3.png" alt="" ></a>      
@@ -119,13 +121,32 @@
               <div class="box-i" id="img">
                 <a href="https://www.instagram.com/veriyamazoe_/"><img src="../imgs/home/insta4.png" alt="" ></a>      
               </div>
-        </div>
+        </div> -->
           
 
             <div class="espaco" style="color: white;">.</div>
             <div class="espaco" style="color: white;">.</div> 
 
-          <h1>Workshops</h1>
+            <div class="card-grafico">
+                <h2>A importância das temperaturas regionais no look</h2>
+                <p>
+                    Cada região possui variações de temperatura que podem afetar diretamente o nosso conforto e bem-estar. Ao montar um look, é fundamental considerar essas diferenças e adaptar-se ao clima local.
+                </p>
+                <div id="metricaRegiao">
+                    <div class="grafico">
+                
+                        <canvas id="regiaoBarra"> </canvas>
+            
+                    </div>
+                
+                </div>
+                <p>
+                    Ao analisar o gráfico, é possível perceber a variação de usuários em diferentes regiões. Essa informação é essencial para planejar o conteúdo adequado e estar preparada para que nossas dicas ajudem mulheres de todas as regiões.
+                </p>
+            </div>
+        
+
+          <div class="workshop"><h1>Workshops</h1></div>
          <div class="boxes"> 
             <div class="box">
                 <img src="../imgs/home/workshop1.png" alt="" >  
@@ -145,27 +166,7 @@
         </div>
     </div> 
 </div> 
-
-<div>
-
-</div>
-<div class="card-grafico">
-        <h2>A importância das temperaturas regionais no look</h2>
-        <p>
-            Cada região possui variações de temperatura que podem afetar diretamente o nosso conforto e bem-estar. Ao montar um look, é fundamental considerar essas diferenças e adaptar-se ao clima local.
-        </p>
-        <div id="metricaRegiao">
-            <div class="grafico">
-        
-                <canvas id="regiaoBarra"> </canvas>
-        
-            </div>
-        
-        </div>
-        <p>
-            Ao analisar o gráfico, é possível perceber a variação de usuários em diferentes regiões. Essa informação é essencial para planejar o conteúdo adequado e estar preparada para que nossas dicas ajudem mulheres de todas as regiões.
-        </p>
-    </div>
+  
 
 <div class="footer" style="color: white;">
    
@@ -260,7 +261,7 @@ function limparSessao() {
                 stacked: false,
                 title: {
                     display: true,
-                    text: 'xxx'
+                    text: 'Regiões Usuários'
                 },
 
                 scales: {
@@ -340,9 +341,9 @@ function limparSessao() {
     slideContador = 0
     }
     
-    imgs.style.transform = `translateX(${-slideContador * 500}px)`;
+    imgs.style.transform = `translateX(${-slideContador * 400}px)`;
     }
     
-    setInterval(slide, 1900);
+    setInterval(slide, 3000);
     
 </script>
