@@ -48,4 +48,7 @@ insert into estilo values
 (null,'Romântico'),
 (null,'Sexy');
 
+select count(usuario.fkEstilo) as Voto, estilo.estilo as Estilo from usuario join estilo on estilo.id = usuario.fkEstilo group by usuario.fkEstilo;
+select count(usuario.fkRegiao) as Voto, regiao.regiao as Regiao from usuario join regiao on regiao.idRegiao = usuario.fkRegiao group by usuario.fkRegiao;
+
 
