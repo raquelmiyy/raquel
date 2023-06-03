@@ -67,7 +67,6 @@ function cadastrar(req, res) {
     var sobrenome = req.body.sobrenomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var telefone = req.body.telefoneServer;
     var regiao = req.body.regiaoServer;
     var dtNasc = req.body.dtNascServer;
     var estilo = req.body.estiloServer;
@@ -80,8 +79,6 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (sobrenome == undefined) {
         res.status(400).send("Seu sobrenome está undefined!");
-    } else if (telefone == undefined) {
-        res.status(400).send("Seu telefone está undefined!");
     } else if (regiao == undefined) {
         res.status(400).send("Sua região está undefined!");
     } else if (dtNasc == undefined) {
@@ -93,7 +90,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, dtNasc, senha, telefone, regiao,estilo)
+        usuarioModel.cadastrar(nome, sobrenome, email, dtNasc, senha, regiao,estilo)
             .then(
                 function (resultado) {
                     res.json(resultado);

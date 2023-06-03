@@ -40,11 +40,6 @@
         <span>Senha</span>
         <input type="password" placeholder="Digite a senha" id="iptSenha">
         </div>
-   
-       <div class="input-box">
-        <span>Telefone</span>
-        <input type="tel" placeholder="Ex: (11)912341234" id="iptTelefone">
-       </div>
 
        <div class="input-box">
        <label for="regiao">Região:</label>
@@ -91,13 +86,12 @@ function cadastrar() {
     var senhaVar = iptSenha.value;
     var sobrenomeVar = iptSobrenome.value;
     var regiaoVar = iptRegiao.value;
-    var telefoneVar = iptTelefone.value;
     var dtNascVar = iptDt.value;
     var estiloVar = iptEstilo.value;
 
 
     
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || telefoneVar == "" || regiaoVar == "" || dtNascVar == "" || estiloVar == "") {
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" ||  regiaoVar == "" || dtNascVar == "" || estiloVar == "") {
         
         // finalizarAguardar();
         return false;
@@ -117,7 +111,6 @@ function cadastrar() {
             sobrenomeServer: sobrenomeVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-            telefoneServer: telefoneVar,
             regiaoServer: regiaoVar,
             estiloServer: estiloVar,
             dtNascServer: dtNascVar 
