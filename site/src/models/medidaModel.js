@@ -9,7 +9,6 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
         `;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select count(usuario.fkRegiao) as Voto, regiao.regiao as Regiao from usuario join regiao on regiao.idRegiao = usuario.fkRegiao group by usuario.fkRegiao;
-
         `;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
