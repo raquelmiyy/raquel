@@ -39,7 +39,9 @@
     </div>
    <div class="banner">
         <div class="container">
-            <p> Não há necessidade de se vestir como todo mundo. É muito mais divertido criar seu próprio visual.</p>
+            <p>Olá <span id="b_usuario">usuário</span>! Bem Vinda ao Vitrine Fashion</p> <br>
+
+            <!-- <p> Não há necessidade de se vestir como todo mundo. É muito mais divertido criar seu próprio visual.</p> -->
         </div>
     </div>
         <div class="container">
@@ -97,13 +99,16 @@
             <div class="carroselContainer">
         <div class="homeCarrossel">
             <div class="imgEsgrima" id="img">
+                <img src="../imgs/home/insta1.png" class="imgSlide">
+                <img src="../imgs/home/insta2.png" class="imgSlide">
                 <img src="../imgs/home/insta3.png" class="imgSlide">
                 <img src="../imgs/home/insta4.png" class="imgSlide">
-                <img src="../imgs/home/insta3.png" class="imgSlide">
-                <img src="../imgs/home/insta4.png" class="imgSlide">
-                <img src="../imgs/home/insta4.png" class="imgSlide">
-                <img src="../imgs/home/insta4.png" class="imgSlide">
-                <img src="../imgs/home/insta4.png" class="imgSlide">
+                <img src="../imgs/home/insta5.png" class="imgSlide">
+                <img src="../imgs/home/insta6.png" class="imgSlide">
+                <img src="../imgs/home/insta7.png" class="imgSlide">
+                <img src="../imgs/home/insta8.png" class="imgSlide">
+                <img src="../imgs/home/insta9.png" class="imgSlide">
+                <img src="../imgs/home/insta10.png" class="imgSlide">
             </div>
         </div>
     </div> 
@@ -173,6 +178,7 @@ function limparSessao() {
 }
 </script>
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     let proximaAtualizacao;
 
     window.onload = obterDadosGrafico(1);
