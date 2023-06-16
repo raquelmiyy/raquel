@@ -139,7 +139,7 @@ position: relative;
     opacity: 1;
 }
 
-
+/* 
 .enquete {
     background-color:rgb(190, 51, 74);
     border-radius: 10px;
@@ -162,7 +162,7 @@ position: relative;
 .enquete  form {
     color: white;
     font-size: 14px;
-  }
+  } 
   
 .enquete  input[type="radio"] {
     margin-bottom: 10px;
@@ -183,4 +183,4 @@ position: relative;
       padding: 10px 15px;
      border-radius: 5px;
       font-size: 20px;
-  }
+  }*/

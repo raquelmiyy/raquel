@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    body {
+      background-color: whitesmoke;
+    }
+
+    .parabens {
+      font-size: 48px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .parabens p {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    .parabens p:nth-child(1) {
+      animation-delay: 0.5s;
+      color:#ffd700;
+    }
+
+    .parabens p:nth-child(2) {
+      animation-delay: 2s;
+      color: red;
+    }
+
+    .parabens p:nth-child(3) {
+      animation-delay: 3.5s;
+      color:#6b0c34;
+    }
+
+    .parabens p:nth-child(4) {
+      animation-delay: 5s;
+      color:#0b6623;
+    }
+
+    .parabens p:nth-child(5) {
+      animation-delay: 6.5s;
+      color:#003049;
+    }
+
+    .parabens p:nth-child(6) {
+      animation-delay: 8s;
+      color:#ff7f00;
+    }
+
+    .parabens p:nth-child(7) {
+      animation-delay: 9.5s;
+      color:#8338ec;
+    }
+
+    .parabens p:nth-child(8) {
+      animation-delay: 11s;
+      color:#ffd700;
+    }
+  </style>
+</head>
+<body>
+  <div class="parabens">
+    <p>Parabéns pra você</p>
+    <p>Nesta data querida</p>
+    <p>Muitas felicidades</p>
+    <p>Muitos anos de vida</p>
+    <p>Parabéns pra você</p>
+    <p>Nesta data querida</p>
+    <p>Muitas felicidades</p>
+    <p>Muitos anos de vida</p>
+  </div>
+</body>
+</html>

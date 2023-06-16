@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+    
+    .feliz-aniversario {
+      font-size: 48px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .feliz-aniversario img {
+      width:500px;
+      height: 500px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgb(231, 10, 10);
+    }
+
+    .confeti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: yellow;
+      top: -10px;
+      animation: confeti-fall 2s linear infinite;
+    }
+
+    @keyframes confeti-fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="feliz-aniversario">
+    <img src="../imgs/Tony-Stark.jpg" alt="Foto de Marcella">
+    <p>Feliz Aniversário Marcella!</p>
+  </div>
+
+  <!-- Adicione os confetes usando JavaScript -->
+  <script>
+    // Gerar confetes
+    function generateConfetti() {
+      for (let i = 0; i < 50; i++) {
+        const confeti = document.createElement('div');
+        confeti.classList.add('confeti');
+        confeti.style.left = `${Math.random() * 100}vw`;
+        confeti.style.animationDelay = `${Math.random()}s`;
+
+        document.body.appendChild(confeti);
+      }
+    }
+
+    generateConfetti();
+  </script>
+</body>
+</html>
